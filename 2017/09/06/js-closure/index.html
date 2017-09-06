@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next gemini use-motion" lang="en">
+<html class="theme-next pisces use-motion" lang="en">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Site of Bathpp">
 <meta property="og:description" content="JS closure and something relatedClosure &amp;amp; emulate Private Scope in JS A closure can not only access the variables defined in its outer function but also the arguments of the outer function.  The e">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-06T16:24:15.478Z">
+<meta property="og:updated_time" content="2017-09-06T17:48:24.434Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js-closure">
 <meta name="twitter:description" content="JS closure and something relatedClosure &amp;amp; emulate Private Scope in JS A closure can not only access the variables defined in its outer function but also the arguments of the outer function.  The e">
@@ -113,7 +113,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Gemini',
+    scheme: 'Pisces',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
@@ -334,13 +334,13 @@
 <p>A closure can not only access the variables defined in its outer function but also the arguments of the outer function.</p>
 </blockquote>
 <p>The example below creates a private scope by adding parenthesis at the end of the function, it tells the interpreter to execute it as soon as it reads it without invocation. Functions and variables in it are not accessible from outside.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(function () &#123;</div><div class="line">  // private scope</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="comment">// private scope</span></div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
 <p>But what if we want some of the functions to be public?</p>
-<h3 id="The-Module-Pattern"><a href="#The-Module-Pattern" class="headerlink" title="The Module Pattern"></a>The Module Pattern</h3><p>The Module Pattern looks like this:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var Module = (function() &#123;</div><div class="line">    function privateMethod() &#123;</div><div class="line">        // do something</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    return &#123;</div><div class="line">        publicMethod: function() &#123;</div><div class="line">            // can call privateMethod();</div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
+<h3 id="The-Module-Pattern"><a href="#The-Module-Pattern" class="headerlink" title="The Module Pattern"></a>The Module Pattern</h3><p>The Module Pattern looks like this:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Module = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">privateMethod</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// do something</span></div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        publicMethod: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="comment">// can call privateMethod();</span></div><div class="line">        &#125;</div><div class="line">    &#125;;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure></p>
 <p>and can be used like this:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Module.publicMethod(); // works</div><div class="line">Module.privateMethod(); // Uncaught ReferenceError: privateMethod is not defined</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Module.publicMethod(); <span class="comment">// works</span></div><div class="line">Module.privateMethod(); <span class="comment">// Uncaught ReferenceError: privateMethod is not defined</span></div></pre></td></tr></table></figure>
 <p>An even better way of doing this is to add underscore to the private functions and return an anonymous object containg public functions:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var Module = (function () &#123;</div><div class="line">    function _privateMethod() &#123;</div><div class="line">        // do something</div><div class="line">    &#125;</div><div class="line">    function publicMethod() &#123;</div><div class="line">        // do something</div><div class="line">    &#125;</div><div class="line">    return &#123;</div><div class="line">        publicMethod: publicMethod,</div><div class="line">    &#125;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> Module = (<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">_privateMethod</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// do something</span></div><div class="line">    &#125;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">publicMethod</span>(<span class="params"></span>) </span>&#123;</div><div class="line">        <span class="comment">// do something</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">        publicMethod: publicMethod,</div><div class="line">    &#125;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
 <p>Reference: <a href="https://scotch.io/tutorials/understanding-scope-in-javascript" target="_blank" rel="external">Understanding Scope in JavaScript</a></p>
 
       
@@ -381,6 +381,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/09/06/react-gallery/" rel="prev" title="React-Gallary">
+                React-Gallary <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -457,7 +461,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -470,7 +474,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
@@ -543,7 +547,7 @@
 <div class="theme-info">
   Theme -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Gemini
+    NexT.Pisces
   </a>
 </div>
 
