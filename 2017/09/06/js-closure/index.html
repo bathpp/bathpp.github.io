@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Site of Bathpp">
 <meta property="og:description" content="JS closure and something relatedClosure &amp;amp; emulate Private Scope in JS A closure can not only access the variables defined in its outer function but also the arguments of the outer function.  The e">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-06T16:22:43.416Z">
+<meta property="og:updated_time" content="2017-09-06T16:24:15.478Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js-closure">
 <meta name="twitter:description" content="JS closure and something relatedClosure &amp;amp; emulate Private Scope in JS A closure can not only access the variables defined in its outer function but also the arguments of the outer function.  The e">
@@ -341,7 +341,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Module.publicMethod(); // works</div><div class="line">Module.privateMethod(); // Uncaught ReferenceError: privateMethod is not defined</div></pre></td></tr></table></figure>
 <p>An even better way of doing this is to add underscore to the private functions and return an anonymous object containg public functions:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">var Module = (function () &#123;</div><div class="line">    function _privateMethod() &#123;</div><div class="line">        // do something</div><div class="line">    &#125;</div><div class="line">    function publicMethod() &#123;</div><div class="line">        // do something</div><div class="line">    &#125;</div><div class="line">    return &#123;</div><div class="line">        publicMethod: publicMethod,</div><div class="line">    &#125;</div><div class="line">&#125;)();</div></pre></td></tr></table></figure>
-<p><a href="https://scotch.io/tutorials/understanding-scope-in-javascript" target="_blank" rel="external">Article Reference Link</a></p>
+<p>Reference: <a href="https://scotch.io/tutorials/understanding-scope-in-javascript" target="_blank" rel="external">Understanding Scope in JavaScript</a></p>
 
       
     </div>
@@ -381,10 +381,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/06/js-scope/" rel="prev" title="js-closure">
-                js-closure <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -461,7 +457,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
