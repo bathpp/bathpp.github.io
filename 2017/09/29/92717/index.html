@@ -112,16 +112,17 @@
 
 
 
-<meta name="description" content="A blog for lols">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Site of Bathpp">
-<meta property="og:url" content="http://bathpp.github.io/tags/React/index.html">
+<meta name="description" content="Things recently touchedBeen busy and lazyDid some fix for a small project, worked on React, Redux, ImmutableJs &amp;amp; Saga. One thing to note down: JSON doesn’t preserve order.I had a task to fix the d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Things recently touched">
+<meta property="og:url" content="http://bathpp.github.io/2017/09/29/92717/index.html">
 <meta property="og:site_name" content="Site of Bathpp">
-<meta property="og:description" content="A blog for lols">
+<meta property="og:description" content="Things recently touchedBeen busy and lazyDid some fix for a small project, worked on React, Redux, ImmutableJs &amp;amp; Saga. One thing to note down: JSON doesn’t preserve order.I had a task to fix the d">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2017-09-30T02:56:10.264Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Site of Bathpp">
-<meta name="twitter:description" content="A blog for lols">
+<meta name="twitter:title" content="Things recently touched">
+<meta name="twitter:description" content="Things recently touchedBeen busy and lazyDid some fix for a small project, worked on React, Redux, ImmutableJs &amp;amp; Saga. One thing to note down: JSON doesn’t preserve order.I had a task to fix the d">
 
 
 
@@ -150,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://bathpp.github.io/tags/React/"/>
+  <link rel="canonical" href="http://bathpp.github.io/2017/09/29/92717/"/>
 
 
 
 
 
-  <title>Tag: React | Site of Bathpp</title>
+  <title>Things recently touched | Site of Bathpp</title>
   
 
 
@@ -181,7 +182,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -275,54 +276,144 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>React<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://bathpp.github.io/2017/09/29/92717/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="bathpp">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://raw.githubusercontent.com/bathpp/heyulin.co.nf/master/ww/icons/face-cool-24.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Site of Bathpp">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/09/06/react-gallery/" itemprop="url">
-              
-                <span itemprop="name">React-Gallary</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Things recently touched</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-09-06T12:31:57-04:00"
-              content="2017-09-06" >
-          09-06
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-29T22:10:21-04:00">
+                2017-09-29
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Things-recently-touched"><a href="#Things-recently-touched" class="headerlink" title="Things recently touched"></a>Things recently touched</h1><p>Been busy and lazy<br>Did some fix for a small project, worked on React, Redux, ImmutableJs &amp; Saga.</p>
+<p>One thing to note down: JSON doesn’t preserve order.<br>I had a task to fix the display of a list to make them display in alphabet order.<br>At the very begining, I just added a <code>ORDER BY</code> in the back-end query, thougt it would be ok, but no, the display is still random. After some digging and googling, found out it is the JSON.<br>Even though the data fetched from DB is sorted, it then get parsed as JSON and sent to front-end.<br>Work around is to store the data in Array and then JSON will have it in right order.<br>Example:<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// <span class="keyword">array</span> <span class="keyword">in</span> JSON</div><div class="line">&#123;</div><div class="line">    <span class="string">"arrayItem"</span>:</div><div class="line">    [</div><div class="line">        &#123;<span class="string">"1"</span>:<span class="string">"a"</span>&#125;,</div><div class="line">        &#123;<span class="string">"2"</span>:<span class="string">"b"</span>&#125;,</div><div class="line">        &#123;<span class="string">"3"</span>:<span class="string">"c"</span>&#125;,</div><div class="line">        &#123;<span class="string">"4"</span>:<span class="string">"d"</span>&#125;</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Reference: <a href="https://stackoverflow.com/questions/4515676/keep-the-order-of-the-json-keys-during-json-conversion-to-csv" target="_blank" rel="external">StackOverFlow Question</a></p>
+<p>Started a project involving GraphQL, back-end layer and query builder is mostly done by others.<br>Will work on building the front-end interface that can build and to shot GraphQL query.</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/08/Hoist/" rel="next" title="Hoist">
+                <i class="fa fa-chevron-left"></i> Hoist
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -330,6 +421,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -350,8 +445,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="https://raw.githubusercontent.com/bathpp/heyulin.co.nf/master/ww/icons/face-cool-24.png"
@@ -428,6 +532,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Things-recently-touched"><span class="nav-number">1.</span> <span class="nav-text">Things recently touched</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -548,10 +668,10 @@
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
