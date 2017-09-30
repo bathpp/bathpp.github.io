@@ -119,7 +119,7 @@
 <meta property="og:site_name" content="Site of Bathpp">
 <meta property="og:description" content="Things recently touchedBeen busy and lazyDid some fix for a small project, worked on React, Redux, ImmutableJs &amp;amp; Saga. One thing to note down: JSON doesn’t preserve order.I had a task to fix the d">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-30T02:56:10.264Z">
+<meta property="og:updated_time" content="2017-09-30T03:05:20.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Things recently touched">
 <meta name="twitter:description" content="Things recently touchedBeen busy and lazyDid some fix for a small project, worked on React, Redux, ImmutableJs &amp;amp; Saga. One thing to note down: JSON doesn’t preserve order.I had a task to fix the d">
@@ -359,8 +359,8 @@
       
         <h1 id="Things-recently-touched"><a href="#Things-recently-touched" class="headerlink" title="Things recently touched"></a>Things recently touched</h1><p>Been busy and lazy<br>Did some fix for a small project, worked on React, Redux, ImmutableJs &amp; Saga.</p>
 <p>One thing to note down: JSON doesn’t preserve order.<br>I had a task to fix the display of a list to make them display in alphabet order.<br>At the very begining, I just added a <code>ORDER BY</code> in the back-end query, thougt it would be ok, but no, the display is still random. After some digging and googling, found out it is the JSON.<br>Even though the data fetched from DB is sorted, it then get parsed as JSON and sent to front-end.<br>Work around is to store the data in Array and then JSON will have it in right order.<br>Example:<br><figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">// <span class="keyword">array</span> <span class="keyword">in</span> JSON</div><div class="line">&#123;</div><div class="line">    <span class="string">"arrayItem"</span>:</div><div class="line">    [</div><div class="line">        &#123;<span class="string">"1"</span>:<span class="string">"a"</span>&#125;,</div><div class="line">        &#123;<span class="string">"2"</span>:<span class="string">"b"</span>&#125;,</div><div class="line">        &#123;<span class="string">"3"</span>:<span class="string">"c"</span>&#125;,</div><div class="line">        &#123;<span class="string">"4"</span>:<span class="string">"d"</span>&#125;</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>Reference: <a href="https://stackoverflow.com/questions/4515676/keep-the-order-of-the-json-keys-during-json-conversion-to-csv" target="_blank" rel="external">StackOverFlow Question</a></p>
-<p>Started a project involving GraphQL, back-end layer and query builder is mostly done by others.<br>Will work on building the front-end interface that can build and to shot GraphQL query.</p>
+<p>Reference: <a href="https://stackoverflow.com/questions/4515676/keep-the-order-of-the-json-keys-during-json-conversion-to-csv" target="_blank" rel="external">StackOverFlow Related Question</a></p>
+<p>Started a project involving <a href="http://graphql.org/learn/" target="_blank" rel="external">GraphQL</a>, seems interesting.<br>The GraphQL-&gt;DB layer and query builder is mostly done by other developer. I will work on building the front-end interface that can build and to shot GraphQL query.</p>
 
       
     </div>
